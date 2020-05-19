@@ -2,7 +2,7 @@
 {% block content %}
 <div class="container">
     <form method="get">
-        <label>Inserte los datos para la tabla Cultivo</label><br>
+        <label>CultivoEvergreenAzure</label><br>
         <label>Codigo: </label>
         <input name="codigo"><br>     
         <label>Latitud: </label>
@@ -19,6 +19,7 @@
         <label>Area: </label>
         <input type="number" name="area" min="0"><br>
         <button type="submit">Enviar</button><br>
+ 
     </form>
     {% for cultivo in cultivo %}
     <ul class="list-group">
