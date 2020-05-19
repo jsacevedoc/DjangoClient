@@ -1,0 +1,33 @@
+{% extends 'measure/base.html' %}
+{% block content %}
+<div class="container">
+    <form method="get">
+        <label>Inserte los datos para la tabla Cultivo</label><br>
+        <label>Codigo: </label>
+        <input name="codigo"><br>     
+        <label>Latitud: </label>
+        <input name="latitud"><br>
+        <label>Longitud: </label>
+        <input name="longitud"><br>
+        <label>Producto: </label>
+        <select name="producto">
+            <option>Leche</option>
+            <option>Cacao</option>
+            <option>Flores</option>
+            <option>Hortalizas</option>
+        </select><br>
+        <label>Area: </label>
+        <input type="number" name="area" min="0"><br>
+        <button type="submit">Enviar</button><br>
+    </form>
+    {% for cultivo in cultivo %}
+    <ul class="list-group">
+        <li class="list-group-item">Codigo: {{cultivo.codigo}}</li>
+        <li class="list-group-item">Latitud: {{cultivo.latitud}}</li>
+        <li class="list-group-item">Longitud: = {{cultivo.longitud}}</li>
+        <li class="list-group-item">Producto: {{cultivo.producto}}</li>
+        <li class="list-group-item">Area: {{cultivo.area}}</li>
+    </ul>
+    {% endfor %}
+</div>
+{% endblock %} 

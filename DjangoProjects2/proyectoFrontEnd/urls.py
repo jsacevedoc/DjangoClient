@@ -19,5 +19,6 @@ from measure import views as measure_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', measure_views.measure, name='measure'),
+    #path('', measure_views.measure, name='measure'),
+    path('', measure_views.cultivo, name='cultivo'),
 ]
