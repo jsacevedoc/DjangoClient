@@ -37,12 +37,12 @@ def cultivo(request):
             # Crea el json para realizar la petición POST al Web Service
             args = {'codigo': codigo, 'latitud': latitud, 'longitud': longitud, 'producto': producto, 'area': area}
             print(args)
-            response = requests.post('http://127.0.0.1:8000/cultivo/', args)
+            response = requests.post('https://p1-cultivo-bck.azurewebsites.net/', args)
             # Convierte la respuesta en JSON
             cultivo_json = response.json()
 
     # Realiza una petición GET al Web Services
-    response = requests.get('http://127.0.0.1:8000/cultivo/')
+    response = requests.get('https://p1-cultivo-bck.azurewebsites.net/')
     # Convierte la respuesta en JSON
     cultivo = response.json()
     # Rederiza la respuesta en el template measure
